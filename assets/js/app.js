@@ -19,11 +19,15 @@ function testResult(result){
 function renderResult(result){
   return `
     <div class="js-search_result">
-      <a href="https://www.goodreads.com/book/show/${result.best_book.id.content}" target="_blank" ><img class="js-result_thumb" src="${result.best_book.image_url}"></a>
-      <br><h3>${result.best_book.title}</h3>
-      <h4><a href="https://www.goodreads.com/author/show/${result.best_book.author.id.content}" target="_blank" >${result.best_book.author.name}</a></h4>
-      <hr>
+      <a class="js-result_thumb" href="https://www.goodreads.com/book/show/${result.best_book.id.content}" target="_blank" ><img class="js-result_thumb" src="${result.best_book.image_url}"></a>
+      <br>
+      <div class="js-result_info_box">
+        <h3 class="js-result_title">${result.best_book.title}</h3>
+        <h4 class="js-result_author"><a href="https://www.goodreads.com/author/show/${result.best_book.author.id.content}" target="_blank" >${result.best_book.author.name}</a></h4>
+        <h4 class="js-result_more_info"><a href="https://www.goodreads.com/book/show/${result.best_book.id.content}" target="_blank" >more info</a></h4>
+      </div>
     </div>
+    <hr>
   `;
 }
 
@@ -58,8 +62,8 @@ function renderData(data){
 //event listen
 function handleFormSubmit() {
 $('#js-search_form').submit(function(event){
-	event.preventDefault();
-	const query = $(this).find("#js-search_entry").val();
+  event.preventDefault();
+  const query = $(this).find("#js-search_entry").val();
   $(this).find("#js-search_entry").val("");
   //var adjustedQuery = query.replace(/\s/g, '+');
   var adjustedQuery = encodeURIComponent(query)
@@ -88,6 +92,7 @@ $(function() {
   })
 }
 }*/
+
 
 
 

@@ -8,16 +8,25 @@
   crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="handle">
+            <i class="fas fa-bars"></i>
+      </div>
+      <h1>Search for book</h1>
+      <ul class="nav-list"></ul>
+    </nav>
+  </header>
   <div class="container">
     <div class="search_box">
-      <h1>Book Searcher</h1>
       <form id="js-search_form">
-        <label for="search-label">Search book: </label>
-        <input type="text" name="js-search_entry" id="js-search_entry" placeholder=" title or author">
+        <label for="search-label">Search book:  </label>
+        <input type="text" name="js-search_entry" id="js-search_entry" placeholder="title or author of the book">
         <button type="submit">Search</button>
       </form>
 
@@ -26,7 +35,7 @@
       </ul>
     </div>
   </div>
-
+<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 
 
